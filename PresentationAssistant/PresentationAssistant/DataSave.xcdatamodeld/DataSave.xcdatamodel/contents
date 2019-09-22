@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="14133" systemVersion="17E202" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="Detail" representedClassName=".Detail" syncable="YES" codeGenerationType="category">
+        <attribute name="time" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="word" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="table" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Topic" inverseName="cells" inverseEntity="Topic" syncable="YES"/>
+    </entity>
+    <entity name="Topic" representedClassName=".Topic" syncable="YES" codeGenerationType="category">
+        <attribute name="estimatedTime" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="title" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="cells" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="Detail" inverseName="table" inverseEntity="Detail" spotlightIndexingEnabled="YES" syncable="YES"/>
+    </entity>
+    <elements>
+        <element name="Detail" positionX="2500" positionY="3500" width="128" height="90"/>
+        <element name="Topic" positionX="2277" positionY="3501" width="128" height="88"/>
+    </elements>
+</model>
